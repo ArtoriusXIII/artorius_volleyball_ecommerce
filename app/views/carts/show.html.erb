@@ -1,0 +1,24 @@
+<table class="table table-hover table-bordered table-striped">
+ 
+    <tr>
+        <th>Image</th>
+        <th>Quantity</th>
+        <th>Product name</th>
+        <th>Total price</th>
+    </tr>
+    <% @cart.items.each do |item| %>
+          <tr>
+            <td><%= image_tag item.listing.image.url(:thumb) %></td>  
+            <td><%= item.quantity %></td>
+            <td><%= link_to item.listing.name, item.listing %></td>
+            <td><%= item.total_price %></td>
+         </tr>    
+        
+    <% end %>
+    
+</table>
+
+<h4>Total price for items:</h4>
+    <p><strong><%=  @cart.total_price %><strong></p>
+   
+    
