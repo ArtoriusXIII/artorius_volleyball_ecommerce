@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
   
+  resources :categories
+  devise_for :users
   resources :listings
  
   
@@ -10,6 +12,7 @@ Rails.application.routes.draw do
   
   resource :cart, only: [ :show ] do
     post "add", path: "add/:id"
+      delete "remove", path: "destroy/:id"
   end
 
   root 'listings#index'

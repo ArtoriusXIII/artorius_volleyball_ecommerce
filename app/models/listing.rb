@@ -1,4 +1,6 @@
 class Listing < ActiveRecord::Base
-    has_attached_file :image, styles: { medium: "300x300>", thumb: "100x100>" }, default_url: "sorrynoimage-200x200.jpg"
+    has_attached_file :image, styles: { medium: "200x200>", thumb: "50x30>" }, default_url: "sorrynoimage-200x200.jpg"
     validates_attachment_content_type :image, content_type: /\Aimage\/.*\Z/
+    
+    belongs_to :category
 end

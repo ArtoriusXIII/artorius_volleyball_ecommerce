@@ -7,6 +7,7 @@
     </div>
   </div>
   <div class="col-md-8">
+      <h3><%= link_to @listing.category.name, @listing.category %></h3>
       <h3><%= @listing.name %></h3>
       <p><%= @listing.description %></p>
       <p><%= number_to_currency(@listing.price, :unit => "€") %></p>

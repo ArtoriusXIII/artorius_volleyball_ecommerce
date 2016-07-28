@@ -10,6 +10,16 @@ class CartsController < ApplicationController
    
    def show
    end
-   
+   def remove
+      cart = session['cart']
+      item = cart['items'].find {|item| item['listing_id'] == params[:id]}
+      if item
+         cart['items'].delete item
+      end
+      redirect_to cart_path
+      
+   end
+
+ 
     
 end

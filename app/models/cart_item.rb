@@ -19,5 +19,8 @@ class CartItem
     def total_price
         listing.price * quantity
     end
+    def item
+        @cart.remove_item params[:id], session[:cart_item]
+    end
 end
 

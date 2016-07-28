@@ -5,20 +5,25 @@
         <th>Quantity</th>
         <th>Product name</th>
         <th>Total price</th>
+        <th>Remove product</th>
     </tr>
     <% @cart.items.each do |item| %>
           <tr>
-            <td><%= image_tag item.listing.image.url(:thumb) %></td>  
+            <td class="thumbnail"><%= image_tag item.listing.image.url(:thumb) %></td> 
             <td><%= item.quantity %></td>
             <td><%= link_to item.listing.name, item.listing %></td>
-            <td><%= item.total_price %></td>
+            <td class="text-right"><%= number_to_currency(item.total_price, :unit => "€") %></td>
+            <td><%= link_to "remove item", remove_cart_path(item.listing_id), :method => :delete, :confirm => "Are you sure?",:remote => true %></td>
          </tr>    
         
     <% end %>
     
 </table>
-
-<h4>Total price for items:</h4>
-    <p><strong><%=  @cart.total_price %><strong></p>
-   
+<tfoot>
+    <tr>
+        <td class="text-right">
+            <strong>  Total price for items:</strong><%= number_to_currency(@cart.total_price, :unit => "€") %>
+        </td>
+    </tr>
+ </tfoot>  
     
