@@ -1,9 +1,8 @@
 source 'https://rubygems.org'
-
-
+ruby "2.2.1"
 
 gem 'rails', '4.2.6'
-gem 'sqlite3'
+#gem 'sqlite3'
 gem 'bootstrap-sass'
 gem 'autoprefixer-rails'
 gem 'sass-rails', '~> 5.0'
@@ -19,8 +18,13 @@ gem 'puma'
 gem "paperclip", "~> 5.0.0"
 gem 'activeadmin', '~> 1.0.0.pre4'
 
-
-
+group :production do
+  gem 'pg'
+  gem 'rails_12factor'
+end
+group :development, :test do
+  gem 'sqlite3'
+end
 
 group :development, :test do
   gem 'byebug'
@@ -29,4 +33,5 @@ group :development do
   gem 'web-console', '~> 2.0'
   gem 'spring'
 end
+
 
