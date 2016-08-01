@@ -77,5 +77,5 @@ Rails.application.configure do
   # Do not dump schema after migrations.
   config.active_record.dump_schema_after_migration = false
   #required for devise. In production, :host should be set to the actual host of your application
-  config.action_mailer.default_url_options = { host: 'localhost', port: 3000 }
+  #config.action_mailer.default_url_options = { host: 'https://indoorbeachdublin.herokuapp.com/', port: 3000 }
 end
