@@ -7,7 +7,7 @@ class ListingsController < ApplicationController
   # GET /listings
   # GET /listings.json
   def index
-    @listings = Listing.all
+    @listings = Listing.page(params[:page] || 1).per(params[:per_page] || 9).all
   end
 
   # GET /listings/1
