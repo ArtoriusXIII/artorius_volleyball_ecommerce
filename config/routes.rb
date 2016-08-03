@@ -15,7 +15,12 @@ Rails.application.routes.draw do
   resource :cart, only: [ :show ] do
     post "add", path: "add/:id"
       delete "remove", path: "destroy/:id"
+      get :checkout
   end
+  
+  resources :orders, only: [:index, :show, :create]
+  
+  resources :contacts, only: [:new, :create]
 
   root 'listings#index'
 

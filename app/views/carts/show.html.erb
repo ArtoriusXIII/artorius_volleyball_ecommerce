@@ -15,15 +15,18 @@
             <td class="text-right"><%= number_to_currency(item.total_price, :unit => "€") %></td>
             <td><%= link_to "remove item", remove_cart_path(item.listing_id), :method => :delete, :confirm => "Are you sure?",:remote => true %></td>
          </tr>    
-        
     <% end %>
-    
-</table>
 <tfoot>
     <tr>
+        <td></td>
+        <td></td>
         <td class="text-right">
-            <strong>  Total price for items:</strong><%= number_to_currency(@cart.total_price, :unit => "€") %>
+            <strong>  Total price for items: </strong>
+        </td>
+        <td class="text-right">
+            <strong><%= number_to_currency(@cart.total_price, :unit => "€") %></strong>
         </td>
     </tr>
- </tfoot>  
-    
+ </tfoot> 
+</table>
+<p><%= link_to 'Checkout', checkout_cart_path, class: "btn btn-primary" %></p>

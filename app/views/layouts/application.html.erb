@@ -5,6 +5,12 @@
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
+  <!-- This stylesheet contains specific styles for displaying the map
+         on this page. Replace it with your own styles as described in the
+         documentation:
+         https://developers.google.com/maps/documentation/javascript/tutorial -->
+  <meta name="viewport" content="initial-scale=1.0">
+  <meta charset="utf-8">
 </head>
 <body>
   
@@ -23,10 +29,10 @@
         <!--<p><%= content_tag :div, notice, class: "bg-success" %></p>-->
         <!--<p><%= content_tag :div, alert, class: "bg-danger" %>-->
       <%= yield %>
-      
-      
     
-     <%= render 'layouts/footer' %>
+     
    </div>
+   
+   <%= render 'layouts/footer' %>
 </body>
 </html>

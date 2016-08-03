@@ -19,6 +19,11 @@ class CartsController < ApplicationController
       redirect_to cart_path
       
    end
+   
+   def checkout
+      @order_form = OrderForm.new user: User.new
+   end
+   
 
  
     

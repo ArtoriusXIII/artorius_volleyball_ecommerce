@@ -11,9 +11,16 @@
       <h3><%= @listing.name %></h3>
       <p><%= @listing.description %></p>
       <p><%= number_to_currency(@listing.price, :unit => "€") %></p>
-  </div>
+  </div><br>
+  
 </div>
-<p><%= link_to "Add to cart", add_cart_path, method: :post, class: "btn btn-primary" %></p>
+<div class="col-md-4">
+<%= link_to "Add to cart", add_cart_path, method: :post, class: "btn btn-primary" %> 
+</div>
+
 <br>
+<% if current_user && current_user.admin? %>
 <%= link_to 'Edit', edit_listing_path(@listing) %> |
 <%= link_to 'Back', listings_path %>
+<% end %>
+
