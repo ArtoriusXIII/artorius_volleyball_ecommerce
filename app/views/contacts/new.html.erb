@@ -1,6 +1,39 @@
+<div id='main'>	
+    <h1 class="center1">Our Location in Dublin</h1>
+	<div id="map-container">
+	     <div id="map"></div>
+	    <script>
+	      function initMap() {
+	        // Create a map object and specify the DOM element for display.
+	        var map = new google.maps.Map(document.getElementById('map'), {
+	          center: {lat: 53.3482454384848, lng: -6.2967860673700216},
+	          scrollwheel: false,
+	          zoom: 12
+	        });
+	        var marker = new google.maps.Marker({
+	  						position: {lat: 53.3482454384848, lng: -6.2967860673700216},
+	  						map: map,
+						});
+	      }
+	    </script>
+	    <script src="https://maps.googleapis.com/maps/api/js?sensor&callback=initMap"
+	    async defer></script>
+	 
+	
+	</div><!-- map-container -->
+<br>
+<div class ="row">
+            	
+			         <div class="col-md-12">
+			        
+					    <div class="center1">     	
+						    Contact Us Here				                	
+				    	</div><br>
+				     </div><br>
+				     <hr/>
 
-  <h3>Send A message to Us</h3>
-    <div class="skinny_wrapper wrapper_padding">
+  <div class="col-md-4">
+    
         <%= form_for @contact do |f| %>
             <div class="field">
                 <%= f.label :name %><br>
@@ -22,7 +55,43 @@
                 <%= f.submit 'Send Message', class: "btn btn-primary" %>
             </div><br>
         <% end %>
-    </div>        
+    </div>  
+    
+    
+									<div class="col-md-8">
+							  			<img alt="About" src="http://www.ulc-fitness.de/_media/images/content/650x340/beachvolleyball.jpg" class="about-image2" />
+							  		
+											<hr />
+											
+									
+							       
+											  <div class ="row">
+										         <div class ="center">
+													  <div class="col-md-6">
+														<h3 class="center">Address</h3>
+														<hr>
+														<h3>Dublin</h3>
+														<address>Knockmaun House,</address>
+														<address>42-47, Lower Mount Street,</address>
+														<address>Dublin 2,</address>
+										
+														<address><span style="font-size: 15px;"><span>Tel. +353 1 671 1633&nbsp;</span><br /></span></address>
+									
+													  </div>
+							
+													  <div class="col-md-6">
+													    <h3 class="center">Open hours</h3>
+														<hr>
+													    <address>currently operates on  basis from </address>
+													    <address>Monday to Friday: 9am to 4.50pm</address>
+													</div>
+												</div><!-- services -->
+												  
+									         </div><!-- row -->
+								    </div>
+										       
+	</div><!-- row -->
 
 
 
+</div><!-- main -->

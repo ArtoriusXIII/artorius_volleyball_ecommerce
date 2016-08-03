@@ -19,6 +19,7 @@ gem "paperclip", "~> 5.0.0"
 gem 'activeadmin', '~> 1.0.0.pre4'
 gem 'mail_form'
 
+
 group :production do
   gem 'pg'
   gem 'rails_12factor'
