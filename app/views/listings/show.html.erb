@@ -1,5 +1,4 @@
 
-
 <div class="row">
   <div class="col-md-4">
     <div class="thumbnail">
@@ -14,13 +13,13 @@
   </div><br>
   
 </div>
-<div class="col-md-4">
+<div class="col-md-4"></div>
+<div class="col-md-8">
+
 <%= link_to "Add to cart", add_cart_path, method: :post, class: "btn btn-primary" %> 
-</div>
+<%= link_to 'Back to products', listings_path, class: "btn btn-default" %>
 
-<br>
 <% if current_user && current_user.admin? %>
-<%= link_to 'Edit', edit_listing_path(@listing) %> |
-<%= link_to 'Back', listings_path %>
+  <%= link_to 'Edit product', edit_listing_path(@listing), class: "btn btn-default" %> 
 <% end %>
-
+</div>

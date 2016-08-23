@@ -1,5 +1,6 @@
 class CartsController < ApplicationController
    before_filter :initialize_cart
+   before_action :authenticate_user!, only: [:add]
    
    def add
      @cart.add_item params[:id]
