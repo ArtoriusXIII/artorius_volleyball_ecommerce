@@ -2,10 +2,10 @@
 
 one:
   order_id: 
-  product_id: 
+  listing_id: 
   quantity: 1
 
 two:
   order_id: 
-  product_id: 
+  listing_id: 
   quantity: 1
