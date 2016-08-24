@@ -6,7 +6,7 @@
     <% listings.each do |listing| %>
       <div class="col-sm-6 col-md-4">
         <div class="thumbnail">
-          <%= image_tag listing.image.url %>
+          
           <div class="caption">
             <h4><%= listing.name %></h4>
             <p><%= number_to_currency(listing.price, :unit => "€") %></p><br>
