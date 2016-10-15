@@ -22,7 +22,7 @@ Rails.application.routes.draw do
   
   resources :contacts, only: [:new, :create]
 
-  root 'listings#index'
+  root 'pages#home'
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'

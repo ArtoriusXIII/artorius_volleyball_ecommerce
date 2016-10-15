@@ -22,8 +22,6 @@ gem 'mail_form'
 gem 'kaminari'
 gem 'bootstrap-kaminari-views'
 
-
-
 group :production do
   gem 'pg'
   gem 'rails_12factor'
