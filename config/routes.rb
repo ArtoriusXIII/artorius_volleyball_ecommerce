@@ -11,6 +11,7 @@ Rails.application.routes.draw do
   get '/about' => 'pages#about'
   get '/contact' => 'pages#contact'
   get '/gallery' => 'pages#gallery'
+  get '/listings' => 'listings#index'
   
   resource :cart, only: [ :show ] do
     post "add", path: "add/:id"
