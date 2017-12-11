@@ -16,3 +16,16 @@
 //= require bootstrap-sprockets
 //= require_tree .
 
+function initMap() {
+				var mapDiv = document.getElementById('map');
+				var map = new google.maps.Map(mapDiv, {
+				  center: {lat: 53.3482454384848, lng: -6.2967860673700216},
+				  zoom: 18
+				});
+					var marker = new google.maps.Marker({
+  						position: {lat: 53.3482454384848, lng: -6.2967860673700216},
+  						map: map,
+  		
+					});
+		
+			      }
